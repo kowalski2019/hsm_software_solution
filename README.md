@@ -1,7 +1,7 @@
 
 # HSM (Hardware Security Model) Software Solution by Claude Stephane M. Kouame
 
-In order to realise the encoding and decoding of the data to be stored in our database, we will provide a solution on the software level of HSM technology. This solution will be nothing more than a simple instance with an API whose task is to encode and decode. This instance or service will of course be hosted by the customer, as they will need configuration files that contain the key and other important things like an authentication key.
+In order to realise the encryption and decryption of the data or text, I offer here a solution on the software level of the HSM technology. This solution will be nothing more than a simple instance with an API whose task is to encode and decode. This instance or service will of course be hosted by the customer, as they will need configuration files that contain the key and other important things like an authentication key.
 
 This instance will work in a Docker container or a Linux service, both are possible. The most important thing is that the client has a folder "/crypto/config/" on its server and within this folder a file called "config.toml", because without this file the application will not run.
 
