@@ -1,0 +1,10 @@
+# Global backend configuration file.backend
+
+# Global runtime constants.
+[constants]
+#crypto_key = "hji dwojdw owdowd wdopwd od wojdwqdpjw,dodwqdwqdw dwqid oiwqd e3"
+crypto_key = "4bda55a55fcc2678e72ba07c14f3eeb3e59a6fc523fc6ae594d232762dbcd8dd"
+auth_key = "Dummy"
+
+
+

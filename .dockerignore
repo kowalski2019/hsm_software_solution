@@ -1,0 +1,4 @@
+./config/*
+Dockerfile
+buidDockerImage.sh
+runDocker.sh
