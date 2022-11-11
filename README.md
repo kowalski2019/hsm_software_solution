@@ -1,9 +1,9 @@
 
 # HSM (Hardware Security Model) Software Solution by Claude Stephane M. Kouame
 
-In order to realise the encryption and decryption of the data or text, I offer here a solution on the software level of the HSM technology. This solution will be nothing more than a simple instance with an API whose task is to encode and decode. This instance or service will of course be hosted by the customer, as they will need configuration files that contain the key and other important things like an authentication key.
+In order to realise the encryption and decryption of the data or text, I offer here a solution on the software level of the HSM technology. This solution will be nothing more than a simple instance with an API whose task is to encode and decode.This instance or service can be hosted anywhere. The most important thing is that the configuration file that contains the key and other important elements like an authentication key is present.
 
-This instance will work in a Docker container or a Linux service, both are possible. The most important thing is that the client has a folder "/crypto/config/" on its server and within this folder a file called "config.toml", because without this file the application will not run.
+This instance will run in a Docker container or a Linux service, both are possible. The most important thing is that you have a folder "/crypto/config/" on its server and in this folder a file called "config.toml", because without this file the application will not work.
 
 The content of the configuration file should look like this:
 
@@ -48,7 +48,7 @@ It is essential that the encryption and decryption key is at least 32 bytes in s
 ## Start the Docker container
 
 ```
-sudo docker run -d -p <host_port>:8008 -v /crypto/config:/crypto/config csmk59/crypto:latest`
+sudo docker run -d -p <host_port>:8008 -v /crypto/config:/crypto/config csmk59/crypto:latest
 ```
 
 <host_port> must be chosen by you. It can simply be 8008 or 8000 etc....
@@ -62,7 +62,7 @@ The test can be done with postman or curl.
 ```
  curl -d auth_key="Dummy" \
         -d "text"="Hello World!" \
-        -d "crypto_type="encode" \
+        -d "crypto_type"="encode" \
         -X POST \
         -H "Content-Type: application/xwww-form-urlencoded" \
         - http://127.0.0.1:<host_port>/api/v1/encryption
@@ -74,7 +74,7 @@ The test can be done with postman or curl.
 ```
 curl -d auth_key="dummy" \
         -d "text"="hewfj3jh3981239832bj09djn" \
-        -d "crypto_type="decode" \
+        -d "crypto_type"="decode" \
         -X POST \
         -H "Content-Type: application/xwww-form-urlencoded" \
         - http://127.0.0.1:<host_port>/api/v1/encryption
