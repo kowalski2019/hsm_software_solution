@@ -60,24 +60,24 @@ The test can be done with postman or curl.
 ### Example of encryption
 
 ```
- curl -d auth_key="Dummy" \
-        -d "text"="Hello World!" \
-        -d "crypto_type="encode" \
+ curl -d 'auth_key=Dummy' \
+        -d 'text=Hello World!' \
+        -d 'crypto_type=encode' \
         -X POST \
-        -H "Content-Type: application/xwww-form-urlencoded" \
-        - http://127.0.0.1:<host_port>/api/v1/encryption
+        -H 'Content-Type: application/xwww-form-urlencoded' \
+         http://127.0.0.1:<host_port>/api/v1/encryption
 
 ```
 
 ### Example of decryption
 
 ```
-curl -d auth_key="dummy" \
-        -d "text"="hewfj3jh3981239832bj09djn" \
-        -d "crypto_type="decode" \
+curl -d 'auth_key=dummy' \
+        -d 'text=hewfj3jh3981239832bj09djn' \
+        -d 'crypto_type=decode' \
         -X POST \
-        -H "Content-Type: application/xwww-form-urlencoded" \
-        - http://127.0.0.1:<host_port>/api/v1/encryption
+        -H 'Content-Type: application/xwww-form-urlencoded' \
+         http://127.0.0.1:<host_port>/api/v1/encryption
 
 
 ```
